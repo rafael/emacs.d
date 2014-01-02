@@ -1,4 +1,5 @@
 (require 'zoo-org)
+(require 'ace-jump-mode)
 
 ;;;;;;;;;;;;;;;;;
 ;; jk binding
@@ -33,6 +34,10 @@
 ;;
 ;; Adding the binding for the j character, then
 ;; the k is handled on the function
+
+
+(define-key evil-insert-state-map (kbd "RET") 'newline-and-indent)
+
 (define-key evil-insert-state-map "j" #'zoo/jk-to-normal-mode)
 
 ;;;;;;;;;;;;;;
@@ -45,9 +50,11 @@
 ;; insert mode
 (define-key evil-normal-state-map (kbd ",.") 'find-tag)
 
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+
 ;;;;;;;;;;;;;;;;;
 ;; Custom highlights for insert and normal mode
-;; in the modeline
+;; in the mode-line
 ;;;;;;;;;;;;;;;;;
 ;;
 ;; We don't want evil's default for evil-mode-line-format,
@@ -83,8 +90,8 @@
         (setq zoo-mode-line-clock-in-tag ""))))
 
 (defmacro zoo/make-evil-highlight-mode (evil-mode
-                                        modeline-foreground
-                                        modeline-background
+                                        mode-line-foreground
+                                        mode-line-background
                                         evil-tag-foreground
                                         evil-tag-background
                                         evil-tag-text)
@@ -97,8 +104,8 @@
        ;; highlight for a evil-mode
        (defun ,function-name ()
          (interactive)
-         (set-face-foreground 'modeline ,modeline-foreground)
-         (set-face-background 'modeline ,modeline-background)
+         (set-face-foreground 'mode-line ,mode-line-foreground)
+         (set-face-background 'mode-line ,mode-line-background)
          (setq ,tag-var-name
                (propertize ,evil-tag-text
                            'face
@@ -116,8 +123,8 @@
 
 
 (zoo/make-evil-highlight-mode "insert"    ; mode name
-                              "white"     ; modeline foreground
-                              "#0087AF"   ; modeline background
+                              "white"     ; mode-line foreground
+                              "#0087AF"   ; mode-line background
                               "#005F87"   ; mode foreground
                               "white"     ; mode background
                               " I ")      ; mode tag
@@ -175,43 +182,6 @@
   (zoo/evil-refresh-mode-line))
 
 ;;;;;
-
-(defun zoo/evil-roman-sitdown ()
-  (interactive)
-
-  (setq evil-default-state 'normal)
-  (evil-set-initial-state 'term-mode 'normal)
-  (evil-set-initial-state 'org-mode 'normal)
-
-  (dolist (buffer (buffer-list))
-    (when (not (let ((case-fold-search nil))
-                 (string-match "Minibuf" (buffer-name buffer))))
-      (with-current-buffer buffer
-        (cond
-         ((evil-emacs-state-p) (evil-normal-state)))))))
-
-(defun zoo/evil-tavis-sitdown ()
-  (interactive)
-
-  (setq evil-default-state 'emacs)
-  (evil-set-initial-state 'term-mode 'emacs)
-  (evil-set-initial-state 'org-mode 'emacs)
-
-  (dolist (buffer (buffer-list))
-    (with-current-buffer buffer
-      (cond
-       ((not (evil-emacs-state-p)) (evil-emacs-state))))))
-
-(defun tavis-jack-in ()
-  (interactive)
-  (zoo/evil-tavis-sitdown))
-
-(defun roman-jack-in ()
-  (interactive)
-  (zoo/evil-roman-sitdown))
-
-(global-set-key (kbd "<f7> t") 'tavis-jack-in)
-(global-set-key (kbd "<f7> r") 'roman-jack-in)
 
 (evil-mode 1)
 (global-surround-mode 1)

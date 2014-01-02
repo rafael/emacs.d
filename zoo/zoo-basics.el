@@ -1,5 +1,6 @@
-(require 'golden-ratio)
+;(require 'golden-ratio)
 (require 'uniquify)
+(require 'flyspell)
 
 
 ;; Always show the matching parenthesis
@@ -60,7 +61,19 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 ;; Enable auto-resizing of windows with golden-ratio
-(golden-ratio-enable)
+(golden-ratio-mode)
 
+;; Open windows vertically by default.
+(setq split-width-threshold nil)
+(require 'mmm-auto)
+(setq mmm-global-mode 'buffers-with-submode-classes)
+(setq mmm-submode-decoration-level 2)
+(windmove-default-keybindings)
 
+(global-set-key [f2] 'comment-region)
+(global-set-key [f3] 'uncomment-region)
+
+(setq flyspell-issue-message-flg nil)
+(global-linum-mode t)
+(ac-flyspell-workaround)
 (provide 'zoo-basics)

@@ -27,16 +27,16 @@
 (custom-set-faces
  '(whitespace-space
    ((((class color) (background dark))
-     (:background "#111" :foreground "white"))
+     (:background "#1c1c1c" :foreground "white"))
     (((class color) (background light))
      (:background "yellow" :foreground "black"))
     (t (:inverse-video t))))
  '(whitespace-newline
    ((((class color) (background dark))
-     (:background "#111" :foreground "#111"))))
+     (:background "#1c1c1c" :foreground "#222222"))))
  '(whitespace-tab
    ((((class color) (background dark))
-     (:background "#111" :foreground "#111")))))
+     (:background "#222222" :foreground "#111")))))
 
 ; f4 should be whitespace-cleanup
 (global-set-key (kbd "<f4> SPC") 'whitespace-cleanup)
