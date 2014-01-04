@@ -1,4 +1,3 @@
-;(require 'golden-ratio)
 (require 'uniquify)
 (require 'flyspell)
 
@@ -74,5 +73,6 @@
 
 (setq flyspell-issue-message-flg nil)
 (global-linum-mode t)
+
 (ac-flyspell-workaround)
 (provide 'zoo-basics)
