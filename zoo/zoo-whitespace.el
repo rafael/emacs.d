@@ -23,26 +23,27 @@
      (tab-mark ?\t [?\u25B8 ?\t])
    ))
 
-; special colors for newline and tab character
-(custom-set-faces
- '(whitespace-space
-   ((((class color) (background dark))
-     (:background "#1c1c1c" :foreground "white"))
-    (((class color) (background light))
-     (:background "yellow" :foreground "black"))
-    (t (:inverse-video t))))
- '(whitespace-newline
-   ((((class color) (background dark))
-     (:background "#1c1c1c" :foreground "#222222"))))
- '(whitespace-tab
-   ((((class color) (background dark))
-     (:background "#222222" :foreground "#111")))))
+;; ;; ; special colors for newline and tab character
+  (custom-set-faces
+   '(whitespace-space
+     ((((class color) (background dark))
+       (:background "#3A3A3A" :foreground "white"))
+      (((class color) (background light))
+       (:background "black" :foreground "white")))
+      (t (:inverse-video t)))
+   '(whitespace-indentation
+     ((((class color) (background dark))
+       (:background "#3A3A3A" :foreground "#696969"))))
+   '(whitespace-tab
+     ((((class color) (background dark))
+       (:background "#3A3A3A" :foreground "#696969")))))
 
-; f4 should be whitespace-cleanup
+                                        ; f4 should be whitespace-cleanup
 (global-set-key (kbd "<f4> SPC") 'whitespace-cleanup)
 (define-key evil-normal-state-map
   (kbd ", SPC") 'whitespace-cleanup)
 
 (add-hook 'after-save-hook 'whitespace-cleanup)
+(global-whitespace-mode 1)
 
 (provide 'zoo-whitespace)

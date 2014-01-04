@@ -2,7 +2,6 @@
 (require 'uniquify)
 (require 'flyspell)
 
-
 ;; Always show the matching parenthesis
 (show-paren-mode 1)
 

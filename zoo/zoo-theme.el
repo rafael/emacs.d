@@ -1,2 +1,2 @@
-(color-theme-solarized-dark)
+(load-theme 'zenburn t)
 (provide 'zoo-theme)

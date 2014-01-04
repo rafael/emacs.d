@@ -85,14 +85,6 @@
                :type git
                :url "https://github.com/purcell/ac-nrepl.git")
 
-        (:name clojure-mode
-               :type git
-               :url "https://github.com/tavisrudd/clojure-mode.git")
-
-        (:name cljsbuild-mode
-               :type git
-               :url "https://github.com/BirdseyeSoftware/cljsbuild-mode.git")
-
         (:name rainbow-delimiters
                :type git
                :url "https://github.com/jlr/rainbow-delimiters.git")
@@ -124,14 +116,6 @@
                :type git
                :url "https://github.com/purcell/mmm-mode.git")
 
-        (:name haskell-mode
-               :type git
-               :url "https://github.com/haskell/haskell-mode.git")
-
-        (:name ghc-mod
-               :type git
-               :url "https://github.com/kazu-yamamoto/ghc-mod.git")
-
         (:name dash
                :type git
                :url "https://github.com/magnars/dash.el.git")
@@ -156,9 +140,6 @@
                :type git
                :url "https://github.com/emacsmirror/auto-complete.git")
 
-        (:name navorski
-               :type git
-               :url "git@bitbucket.org:romanandreg/navorski.el.git")
 
         (:name robe
                :type git
@@ -173,9 +154,6 @@
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")
 
-        (:name proctor-mode
-               :type git
-               :url "git@bitbucket.org:romanandreg/proctor-mode.git")
 
         (:name tagedit
                :type git
@@ -221,17 +199,21 @@
                :type git
                :url "https://github.com/magnars/s.el.git")
 
+        (:name pck-info
+               :type git
+               :url "https://github.com/lunaryorn/pkg-info.el.git")
+
+        (:name epl
+               :type git
+               :url "https://github.com/cask/epl.git")
+
         (:name grizzl
                :type git
                :url "https://github.com/d11wtq/grizzl.git")
 
         (:name web-mode
                :type git
-               :url "https://github.com/fxbois/web-mode.git")
-
-        (:name color-theme-solarized
-               :type git
-               :url "https://github.com/sellout/emacs-color-theme-solarized.git")))
+               :url "https://github.com/fxbois/web-mode.git")))
 
 ;;;;;;;;;;;;;;;;;;;;
 ;;- Setting my dependencies
@@ -263,23 +245,11 @@
        popup
        auto-complete
        moz-repl
-       notify
+       ;notify
 
        ; Lispy languages
        rainbow-mode
        rainbow-delimiters
-
-       ; Clojure mode extensions
-       ;clojure-mode
-       ;swank-clojure
-       ;cljsbuild-mode
-
-       ;; Puppet mode extensions
-       ;puppet-mode
-
-       ; Haskell mode extensions
-       ;haskell-mode
-       ;ghc-mod
 
        ;; Ruby mode extensions
        rinari
@@ -296,11 +266,8 @@
        ;; Color themes dependencies
        color-theme
        ;;color-theme-sunburst
-       color-theme-solarized
        dash
        ;;
-       navorski
-       proctor-mode
        jshint-mode
        mmm-mode
        tagedit
@@ -310,7 +277,8 @@
 
        ; misc
        ac-jump-mode
-       smartparens
+       epl
+       pck-info
        projectile
        grizzl
        s
@@ -318,5 +286,6 @@
        ))
 
 (el-get 'sync zoo-el-get-packages)
+
 
 (provide 'zoo-dependencies)
