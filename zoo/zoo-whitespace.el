@@ -31,7 +31,7 @@
       (((class color) (background light))
        (:background "black" :foreground "white")))
       (t (:inverse-video t)))
-   '(whitespace-indentation
+   '(whitespace-space-after-tab
      ((((class color) (background dark))
        (:background "#3A3A3A" :foreground "#696969"))))
    '(whitespace-tab

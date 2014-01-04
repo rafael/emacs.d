@@ -69,83 +69,14 @@
                :type git
                :url "https://github.com/purcell/flymake-ruby.git")
 
-        (:name evil-paredit
-               :type git
-               :url "https://github.com/roman/evil-paredit.git")
-
-        (:name flip-tables
-               :type http
-               :url "http://www.emacswiki.org/emacs/download/flip-tables.el")
-
-        (:name rainbow-mode
-               :type git
-               :url "https://github.com/emacsmirror/rainbow-mode.git")
-
-        (:name ac-nrepl
-               :type git
-               :url "https://github.com/purcell/ac-nrepl.git")
-
-        (:name rainbow-delimiters
-               :type git
-               :url "https://github.com/jlr/rainbow-delimiters.git")
-
         (:name evil-surround
                :type git
                :url "https://github.com/timcharper/evil-surround.git")
-
-        (:name window-numbering
-               :type git
-               :url "https://github.com/nschum/window-numbering.el.git")
-
-        (:name golden-ratio
-               :type git
-               :url "https://github.com/roman/golden-ratio.el.git")
-
-        (:name winner-mode
-               :type emacswiki)
-
-        (:name helm
-               :type git
-               :url "https://github.com/emacs-helm/helm.git")
-
-        (:name helm-c-yasnippet
-               :type git
-               :url "https://github.com/emacs-helm/helm-c-yasnippet.git")
-
-        (:name mmm-mode
-               :type git
-               :url "https://github.com/purcell/mmm-mode.git")
-
-        (:name dash
-               :type git
-               :url "https://github.com/magnars/dash.el.git")
-
-        (:name bm
-               :type http
-               :url "http://cvs.savannah.gnu.org/viewvc/*checkout*/bm/bm/bm.el")
-
-        (:name lineker
-               :type http
-               :url "http://www.helsinki.fi/~sjpaavol/programs/lineker.el")
-
         (:name multi-term-ext
                :type git
                :url "https://github.com/roman/multi-term-ext")
 
-        (:name popup
-               :type git
-               :url "https://github.com/emacsmirror/popup.git")
-
-        (:name auto-complete
-               :type git
-               :url "https://github.com/emacsmirror/auto-complete.git")
-
-
-        (:name robe
-               :type git
-               :url "https://github.com/dgutov/robe.git")
-
-        (:name jshint-mode
+       (:name jshint-mode
                :type git
                :url "https://github.com/daleharvey/jshint-mode.git")
 
@@ -154,62 +85,17 @@
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")
 
-
-        (:name tagedit
-               :type git
-               :url "https://github.com/magnars/tagedit.git")
-
-        (:name coffee-mode
-               :type git
-               :url "https://github.com/defunkt/coffee-mode.git")
-
-        (:name enhanced-ruby-mode
-               :type git
-               :url "https://github.com/zenspider/enhanced-ruby-mode.git")
-
         (:name rhtml
                :type git
                :url "https://github.com/eschulte/rhtml")
-
-        (:name rvm
-               :type git
-               :url "https://github.com/senny/rvm.el.git")
-
-        (:name magit
-               :type git
-               :url "https://github.com/magit/magit.git")
-
-        (:name flymake-easy
-               :type git
-               :url "https://github.com/purcell/flymake-easy.git")
-
-        (:name git-commit-mode
-               :type git
-               :url "https://github.com/magit/git-modes.git")
-
-        (:name projectile
-               :type git
-               :url "https://github.com/bbatsov/projectile.git")
 
         (:name ac-jump-mode
                :type git
                :url "https://github.com/winterTTr/ace-jump-mode.git")
 
-        (:name s
-               :type git
-               :url "https://github.com/magnars/s.el.git")
-
         (:name pck-info
                :type git
                :url "https://github.com/lunaryorn/pkg-info.el.git")
-
-        (:name epl
-               :type git
-               :url "https://github.com/cask/epl.git")
-
-        (:name grizzl
-               :type git
-               :url "https://github.com/d11wtq/grizzl.git")
 
         (:name web-mode
                :type git
@@ -222,67 +108,19 @@
 (setq zoo-el-get-packages
       '(
        ; OH MEIN GOT! I can't live without dependencies
-       package
-       evil
        evil-surround
-       evil-paredit
-       paredit
-       magit
-       git-commit-mode
-       multi-term
        multi-term-ext
-       ack
        sunrise-commander
-       window-numbering
-       winner-mode
-       bm
-       flymake-cursor
-       flymake-easy
-       lineker
-       goto-last-change
-       smex
-       golden-ratio
-       popup
-       auto-complete
-       moz-repl
-       ;notify
-
-       ; Lispy languages
-       rainbow-mode
-       rainbow-delimiters
+      ;notify
 
        ;; Ruby mode extensions
-       rinari
-       ruby-mode
-       rspec-mode
-       robe
-       rvm
-       inf-ruby
        ri
-       ruby-compilation
-       flymake-ruby
-
-
-       ;; Color themes dependencies
-       color-theme
-       ;;color-theme-sunburst
-       dash
-       ;;
        jshint-mode
-       mmm-mode
-       tagedit
-       ;;web-mode
-       coffee-mode
+       web-mode
        rhtml
 
-       ; misc
        ac-jump-mode
-       epl
        pck-info
-       projectile
-       grizzl
-       s
-
        ))
 
 (el-get 'sync zoo-el-get-packages)
