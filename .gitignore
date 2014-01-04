@@ -2,9 +2,12 @@
 ~*
 \#*
 .#*
+.cask
 tramp
 bookmarks
 history
+projectile-bookmarks.eld
+projectile.cache
 *.elc
 
 # Don't save el-get and elpa folders, this are generated automatically
