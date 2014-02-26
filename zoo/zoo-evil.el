@@ -131,28 +131,28 @@
 
 (zoo/make-evil-highlight-mode "normal"
                               "black"
-                              "#E6E5E4"
+                              "#696969"
                               "#005F00"
                               "#AFD700"
                               " N ")
 
 (zoo/make-evil-highlight-mode "emacs"
                               "black"
-                              "#E6E5E4"
+                              "#696969"
                               "white"
                               "#5F005F"
                               " E ")
 
 (zoo/make-evil-highlight-mode "visual"
                               "black"
-                              "#E6E5E4"
+                              "#696969"
                               "#870000"
                               "#FF8700"
                               " VISUAL ")
 
 (zoo/make-evil-highlight-mode "replace"
                               "black"
-                              "#E6E5E4"
+                              "#696969"
                               "white"
                               "#D70000"
                               " REPLACE ")

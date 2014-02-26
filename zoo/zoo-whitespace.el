@@ -16,7 +16,6 @@
         newline
         empty
         space-after-tab
-        ;space-mark
         tab-mark
         newline-mark))
 
@@ -50,6 +49,6 @@
   (kbd ", SPC") 'whitespace-cleanup)
 
 (add-hook 'after-save-hook 'whitespace-cleanup)
-(global-whitespace-mode 1)
+;;(global-whitespace-mode 1)
 
 (provide 'zoo-whitespace)

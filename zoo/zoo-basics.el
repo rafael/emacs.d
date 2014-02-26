@@ -75,4 +75,6 @@
 (global-linum-mode t)
 
 (ac-flyspell-workaround)
+;; Visual region color
+(set-face-background 'region "#4E4E4E")
 (provide 'zoo-basics)
