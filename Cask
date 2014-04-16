@@ -49,3 +49,6 @@
 (depends-on "tagedit")
 
 (depends-on "zenburn-theme")
+
+(depends-on "scala-mode2")
+(depends-on "sbt-mode")
