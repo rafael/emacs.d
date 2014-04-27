@@ -26,6 +26,7 @@
 (require 'dss-hook-management)
 (require 'zoo-javascript)
 (require 'zoo-projectile)
+(require 'zoo-scala)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
