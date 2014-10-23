@@ -80,11 +80,6 @@
                :type git
                :url "https://github.com/daleharvey/jshint-mode.git")
 
-
-        (:name yasnippet
-               :type git
-               :url "https://github.com/capitaomorte/yasnippet.git")
-
         (:name rhtml
                :type git
                :url "https://github.com/eschulte/rhtml")

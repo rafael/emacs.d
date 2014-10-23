@@ -184,6 +184,6 @@
 ;;;;;
 
 (evil-mode 1)
-(global-surround-mode 1)
+;;(global-surround-mode 1)
 
 (provide 'zoo-evil)

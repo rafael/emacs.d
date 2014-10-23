@@ -33,11 +33,11 @@
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
 
-(depends-on "projectile")
+;;(depends-on "projectile")
 (depends-on "grizzl")
 
 
-(depends-on "robe")
+;;(depends-on "robe")
 (depends-on "rinari")
 (depends-on "ruby-mode")
 (depends-on "rspec-mode")
