@@ -52,3 +52,4 @@
 
 (depends-on "scala-mode2")
 (depends-on "sbt-mode")
+(depends-on "ensime")
