@@ -33,11 +33,11 @@
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
 
-;;(depends-on "projectile")
+(depends-on "projectile")
 (depends-on "grizzl")
 
 
-;;(depends-on "robe")
+(depends-on "robe")
 (depends-on "rinari")
 (depends-on "ruby-mode")
 (depends-on "rspec-mode")
@@ -52,4 +52,6 @@
 
 (depends-on "scala-mode2")
 (depends-on "sbt-mode")
-(depends-on "ensime")
+(depends-on "json-reformat")
+(depends-on "json-mode")
+;(depends-on "ensime")

@@ -1,3 +1,4 @@
+(add-to-list 'load-path (concat user-emacs-directory "ensime"))
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
@@ -19,6 +20,10 @@
       (progn (backward-delete-char 1)
              (insert "←"))
     (insert "-")))
+
+
+(add-hook 'scala-mode-hook '(lambda ()
+                              (set (make-local-variable 'auto-complete-mode) nil)))
 
 
 (add-hook 'scala-mode-hook '(lambda () (interactive)

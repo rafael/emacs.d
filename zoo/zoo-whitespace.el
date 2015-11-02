@@ -14,7 +14,6 @@
         trailing
         space-before-tab
         newline
-        empty
         space-after-tab
         tab-mark
         newline-mark))

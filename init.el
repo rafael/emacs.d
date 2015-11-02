@@ -14,7 +14,7 @@
 (require 'zoo-theme)
 (require 'zoo-org)
 (require 'zoo-bookmarks)
-;;(require 'zoo-whitespace)
+(require 'zoo-whitespace)
 (require 'zoo-ruby)
 (require 'zoo-java)
 (require 'zoo-clojure)
@@ -27,7 +27,7 @@
 (require 'zoo-javascript)
 ;;(require 'zoo-projectile)
 (require 'zoo-scala)
-
+(require 'zoo-avro)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
